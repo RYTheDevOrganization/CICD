@@ -16,8 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SbR-tX-VgN">
+                                <rect key="frame" x="49" y="76" width="97" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onw-v0-e4Z">
+                                <rect key="frame" x="49" y="133" width="67" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="301.5" id="QCA-QF-AYR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="tappedOnBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hLd-xz-AXL"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch7-8K-rrv">
-                                <rect key="frame" x="175" y="438" width="42" height="21"/>
+                                <rect key="frame" x="49" y="172" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -28,8 +44,19 @@
                         <constraints>
                             <constraint firstItem="ch7-8K-rrv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1dn-mX-Xtt"/>
                             <constraint firstItem="ch7-8K-rrv" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5BC-wG-nQa"/>
+                            <constraint firstItem="SbR-tX-VgN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="5l5-Vd-Bbt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SbR-tX-VgN" secondAttribute="trailing" constant="268" id="AIA-Rv-TyD"/>
+                            <constraint firstItem="ch7-8K-rrv" firstAttribute="top" secondItem="onw-v0-e4Z" secondAttribute="bottom" constant="8" symbolic="YES" id="h3j-f4-mDu"/>
+                            <constraint firstItem="onw-v0-e4Z" firstAttribute="top" secondItem="SbR-tX-VgN" secondAttribute="bottom" constant="23" id="nC3-eD-wOY"/>
+                            <constraint firstItem="onw-v0-e4Z" firstAttribute="leading" secondItem="SbR-tX-VgN" secondAttribute="leading" id="ptE-FU-g9P"/>
+                            <constraint firstItem="SbR-tX-VgN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="xTP-SG-bCc"/>
+                            <constraint firstItem="ch7-8K-rrv" firstAttribute="leading" secondItem="onw-v0-e4Z" secondAttribute="leading" id="zhc-o1-kcM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLbl" destination="ch7-8K-rrv" id="c1m-MQ-JXf"/>
+                        <outlet property="myTxtFld" destination="SbR-tX-VgN" id="avr-4K-hvx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
