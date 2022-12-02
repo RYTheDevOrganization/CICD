@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
     @IBAction func tappedOnBtn(_ sender: Any) {
         
-        myLbl.text = "Hello + \(myTxtFld.text ?? "")"
+        myLbl.text = "Hello + \(myTxtFld.text ?? "Hello")"
     }
     
 }
